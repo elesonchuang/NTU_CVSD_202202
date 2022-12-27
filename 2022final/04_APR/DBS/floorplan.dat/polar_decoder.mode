@@ -1,0 +1,20 @@
+catch { setDesignMode -process 130 }
+catch { setAnalysisMode -analysisType single }
+catch { setAnalysisMode -virtualIPO false }
+setExtractRCMode  -engine preRoute -total_c_th 0 -relative_c_th 1 -coupling_c_th 0.4
+catch {setNanoRouteMode -quiet -extractThirdPartyCompatible false}
+
+catch { setPlaceMode -MXPBoundaryLevel 7 }
+catch { setPlaceMode -MXPConstraintFile {} }
+catch { setPlaceMode -MXPControlSetting 0 }
+catch { setPlaceMode -MXPLogicHierAware 0 }
+catch { setPlaceMode -MXPPreplaceSetting 5 }
+catch { setPlaceMode -MXPRefineSetting 17 }
+catch { setPlaceMode -place_global_place_io_pins false }
+catch { setIlmMode -keepHighFanoutPorts true -keepLoopBack false -keepFlatten true }
+catch { setPlanDesignMode -boundaryPlace true }
+catch { setPlanDesignMode -effort high }
+catch { setPlanDesignMode -fixPlacedMacros false }
+catch { setPlanDesignMode -incremental false }
+catch { setPlanDesignMode -noColorize false }
+catch { setDelayCalMode -engine aae }

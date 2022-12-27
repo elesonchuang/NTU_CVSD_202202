@@ -1,0 +1,50 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : core
+Version: R-2020.09-SP5
+Date   : Mon Nov  7 17:06:45 2022
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: number_3 (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: o_out_data[0]
+            (output port clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  core               tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock i_clk (rise edge)                  0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  number_3/CLK (sram_512x8)                0.00       0.50 r
+  number_3/Q[0] (sram_512x8)               2.14       2.64 f
+  U677/Y (AOI22XL)                         0.47       3.11 r
+  U879/Y (NAND2X1)                         0.22       3.33 f
+  U1043/Y (CLKMX2X2)                       0.44       3.78 f
+  o_out_data[0] (out)                      0.00       3.78 f
+  data arrival time                                   3.78
+
+  clock i_clk (rise edge)                 20.00      20.00
+  clock network delay (ideal)              0.50      20.50
+  clock uncertainty                       -0.10      20.40
+  output external delay                  -10.00      10.40
+  data required time                                 10.40
+  -----------------------------------------------------------
+  data required time                                 10.40
+  data arrival time                                  -3.78
+  -----------------------------------------------------------
+  slack (MET)                                         6.62
+
+
+1
