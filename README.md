@@ -1,2 +1,2 @@
 # NTU_CVSD_2021
-Computer-Aided VLSI System Design
+楊家驤老師的"電腦輔助積體電路系統設計"作業(CVSD)
