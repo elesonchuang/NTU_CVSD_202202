@@ -1,0 +1,81 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : core
+Version: U-2022.12
+Date   : Tue Apr 25 13:17:32 2023
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: conv_raw_data_reg[8][6]
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: median_result_reg[2][1][2]
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  core               tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  conv_raw_data_reg[8][6]/CK (DFFRX4)                     0.00       0.50 r
+  conv_raw_data_reg[8][6]/Q (DFFRX4)                      0.52       1.02 f
+  U5422/Y (INVX8)                                         0.15       1.17 r
+  U6918/Y (AO22X4)                                        0.24       1.41 r
+  U3950/Y (NAND2X1)                                       0.14       1.55 f
+  U6703/Y (AOI32X2)                                       0.20       1.74 r
+  U6104/Y (OAI31X4)                                       0.34       2.09 f
+  U6882/Y (CLKAND2X12)                                    0.16       2.25 f
+  U2926/Y (INVX20)                                        0.10       2.34 r
+  U4910/Y (NAND2X8)                                       0.12       2.46 f
+  U7045/Y (NAND2BX4)                                      0.17       2.63 f
+  U9492/Y (OAI211X4)                                      0.42       3.05 r
+  U4284/Y (INVX6)                                         0.14       3.19 f
+  U5429/Y (OAI211X2)                                      0.22       3.41 r
+  U9661/Y (AO21X4)                                        0.20       3.62 r
+  U9662/Y (AO21X4)                                        0.19       3.80 r
+  U5595/Y (NAND4X6)                                       0.14       3.94 f
+  U5594/Y (NAND2X8)                                       0.15       4.09 r
+  U4863/Y (NAND2X4)                                       0.12       4.21 f
+  U4861/Y (CLKINVX8)                                      0.07       4.29 r
+  U4862/Y (INVX12)                                        0.06       4.34 f
+  U9517/Y (OAI222X4)                                      0.61       4.95 r
+  U3013/Y (INVX12)                                        0.12       5.07 f
+  U6575/Y (NAND2X8)                                       0.10       5.17 r
+  U5395/Y (INVX8)                                         0.05       5.22 f
+  U7274/Y (AO21X4)                                        0.17       5.39 f
+  U6866/Y (AO22X4)                                        0.26       5.66 f
+  U3482/Y (AND4X6)                                        0.16       5.82 f
+  U9679/Y (OAI31X2)                                       0.28       6.10 r
+  U9684/Y (AO22X4)                                        0.26       6.36 r
+  U3533/Y (INVX12)                                        0.10       6.46 f
+  U6493/Y (OAI222X2)                                      0.30       6.76 r
+  U4408/Y (INVX4)                                         0.18       6.93 f
+  U5059/Y (OAI22X2)                                       0.16       7.09 r
+  median_result_reg[2][1][2]/D (DFFSRHQX1)                0.00       7.09 r
+  data arrival time                                                  7.09
+
+  clock i_clk (rise edge)                                 7.00       7.00
+  clock network delay (ideal)                             0.50       7.50
+  clock uncertainty                                      -0.10       7.40
+  median_result_reg[2][1][2]/CK (DFFSRHQX1)               0.00       7.40 r
+  library setup time                                     -0.31       7.09
+  data required time                                                 7.09
+  --------------------------------------------------------------------------
+  data required time                                                 7.09
+  data arrival time                                                 -7.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

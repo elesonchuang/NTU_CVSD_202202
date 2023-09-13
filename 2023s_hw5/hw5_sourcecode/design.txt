@@ -1,0 +1,5 @@
+StudentID: b08901093
+
+Clock period: 10 (ns)
+
+(For post-layout simulation)
